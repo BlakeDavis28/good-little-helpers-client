@@ -5,13 +5,13 @@ import { Route } from 'react-router-dom';
 import { db } from './components/firebase';
 
 class App extends Component {
-  componentDidMount() {
-    db.ref().on('value', function(snapshot) {
-      console.log(snapshot.val());
-    }, function (error) {
-      console.log('Error: ' + error.code);
-    });
-  }
+  // componentDidMount() {
+  //   db.ref().on('value', function(snapshot) {
+  //     console.log(snapshot.val());
+  //   }, function (error) {
+  //     console.log('Error: ' + error.code);
+  //   });
+  // }
 
   render() {
     return (
