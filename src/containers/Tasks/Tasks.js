@@ -4,6 +4,7 @@ import TasksRight from '../../components/TasksRight/TasksRight';
 import Grid from '@material-ui/core/Grid'
 import { TASK_STATUS } from '../../utils/constants';
 import MediaQuery from 'react-responsive';
+import { db } from '../../components/firebase';
 
 const getStatus = (status) => {
     switch (status) {
@@ -14,13 +15,33 @@ const getStatus = (status) => {
 }
 
 class Tasks extends Component {
-    state = {
-        selectedTask: null,
-        tasks: Array(8).fill(0).map( (_, i) => ({
-            id: '' + i,
-            title: `Task ${i}`,
-            description: `I am task ${i}`,
-            status: "Completed" }))
+    constructor() {
+      super()
+      this.state = {
+          selectedTask: null,
+          tasks: Array(8).fill(0).map( (_, i) => ({
+              id: '' + i,
+              title: `Task ${i}`,
+              description: `I am task ${i}`,
+              status: "Completed" }))
+      }
+    }
+
+    componentDidMount() {
+      db.ref().on('value', (snapshot) => {
+        console.log(snapshot.val());
+        const taskArray = [];//Object.values(snapshot.val())
+        const allTasks = snapshot.val().tasks
+        for (const t in allTasks) {
+          console.log(t)
+          taskArray.push(allTasks[t])
+        }
+        this.setState({
+          tasks: taskArray
+        })
+      }, function (error) {
+        console.log('Error: ' + error.code);
+      });
     }
 
     componentDidUpdate(prevProps){
