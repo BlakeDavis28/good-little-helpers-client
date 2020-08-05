@@ -30,10 +30,10 @@ const styles = {
 
 const TaskCard = ({ task, classes }) => {
 
-    return ( <Card classes={{ root: classes.root }} className={task.status}>
+    return ( <Card id="cardicon" classes={{ root: classes.root }} className={task.status}>
         <Link to={task.id} style={{ root: classes.root }}>
 
-        <CardContent>
+        <CardContent id="cardcontent">
             <Typography variant="h6">
                 {task.title}
             </Typography>
@@ -41,13 +41,13 @@ const TaskCard = ({ task, classes }) => {
                 {task.description}
             </Typography>
             <Typography variant="caption">
-                location
+                Location: {task.location} <br />
             </Typography>
             <Typography variant="caption">
-                date
+                Date Posted: {task.date} <br />
             </Typography>
             <Typography variant="caption">
-                time
+                {task.caption} <br />
             </Typography>
             <hr />
             <Typography variant="caption">

@@ -7,10 +7,22 @@ import { Link } from 'react-router-dom';
 const Layout = ({ children }) => {
     return (<><AppBar position="static">
                     <Toolbar>
-                        <Typography variant="h6" component={Link} to='/' >
+                        <Typography id="title" variant="h6" component={Link} to='/' >
                             Good Little Helpers
                         </Typography>
                     </Toolbar>
+                    <Link to="/">
+                    home
+                    </Link>
+                    <Link to="/login">
+                    Login
+                    </Link>
+                    <Link to="/signup">
+                    signup
+                    </Link>
+                    <Link to="/signup">
+                    signup
+                    </Link>
                 </AppBar>
                 <div style={{ padding: '8px' }}>
                     {children}

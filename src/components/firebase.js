@@ -1,5 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/database'
+import "firebase/auth";
 
 const config = {
     apiKey: "AIzaSyDcmAiyICoqOFt6c_pKcjSKWgPMymiJu2c",
@@ -14,5 +15,10 @@ const config = {
 
 const fire = app.initializeApp(config)
 const db = app.database()
+
+export const currentUser = async () => {
+  const user = await fire.auth().currentUser
+  return user ? user : null
+}
 
 export {db, fire as default};

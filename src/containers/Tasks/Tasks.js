@@ -42,6 +42,7 @@ class Tasks extends Component {
       }, function (error) {
         console.log('Error: ' + error.code);
       });
+
     }
 
     componentDidUpdate(prevProps){
