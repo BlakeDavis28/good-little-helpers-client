@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fire, { db, currentUser } from '../config/fire';
+import fire, { db, currentUser } from '../components/firebase';
 
 class NewTaskForm extends Component{
   constructor(){

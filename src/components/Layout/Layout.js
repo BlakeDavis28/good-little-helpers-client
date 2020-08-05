@@ -20,8 +20,11 @@ const Layout = ({ children }) => {
                     <Link to="/signup">
                     signup
                     </Link>
-                    <Link to="/signup">
-                    signup
+                    <Link to="/profile">
+                    profile
+                    </Link>
+                    <Link to="/newtaskform">
+                    New Task
                     </Link>
                 </AppBar>
                 <div style={{ padding: '8px' }}>
