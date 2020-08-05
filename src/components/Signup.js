@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Firebase from '../components/firebase';
 import faker from 'faker';
+import { withRouter } from 'react-router-dom';
 
 class Signup extends Component{
   constructor(props){
@@ -23,6 +24,7 @@ class Signup extends Component{
   handleSubmit(event){
     event.preventDefault();
     this.props.signup(this.state.email, this.state.password)
+    this.props.history.push('/tasks')
   }
 
   render(){
@@ -53,4 +55,4 @@ class Signup extends Component{
   }
 }
 
-export default Signup;
+export default withRouter(Signup);

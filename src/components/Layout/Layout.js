@@ -5,12 +5,13 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
 const Layout = ({ children }) => {
-    return (<><AppBar position="static">
+    return (<><AppBar position="static" id ="appbar">
                     <Toolbar>
                         <Typography id="title" variant="h6" component={Link} to='/' >
                             Good Little Helpers
                         </Typography>
                     </Toolbar>
+                    <nav>
                     <Link to="/">
                     home
                     </Link>
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
                     <Link to="/newtaskform">
                     New Task
                     </Link>
+                    </nav>
                 </AppBar>
                 <div style={{ padding: '8px' }}>
                     {children}

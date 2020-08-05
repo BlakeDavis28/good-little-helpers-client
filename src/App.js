@@ -6,7 +6,7 @@ import Signup from './components/Signup';
 import Home from './components/Home'
 import NewTaskForm from './components/NewTaskForm';
 import Profile from './components/Profile';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import fire, { db, currentUser } from './components/firebase';
 
 
@@ -29,7 +29,7 @@ import fire, { db, currentUser } from './components/firebase';
   login(email, password){
       fire.auth().signInWithEmailAndPassword(email, password).then((user) =>{
         console.log(user);
-
+      this.props.history.push('/tasks')
       }).catch((err)=>{
         console.log(err)
       })
@@ -37,6 +37,7 @@ import fire, { db, currentUser } from './components/firebase';
 
   async signup(email, password){
     await fire.auth().createUserWithEmailAndPassword(email, password)
+    
     // grabs user id / sends to the database // ref for writing to DB
 
     // const user = await currentUser();
@@ -60,6 +61,7 @@ import fire, { db, currentUser } from './components/firebase';
         <Route exact path="/newtaskform" component={NewTaskForm} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/:taskId?" component={Tasks} />
+        <Route exact path="/tasks" component={Tasks} />
       </Switch>
       </Layout>
 
@@ -68,4 +70,4 @@ import fire, { db, currentUser } from './components/firebase';
 }
 
 
-export default App;
+export default withRouter(App);

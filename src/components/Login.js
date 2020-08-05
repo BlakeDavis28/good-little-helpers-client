@@ -24,8 +24,22 @@ class Login extends Component{
   handleSubmit(event){
     event.preventDefault();
     this.props.login(this.state.email, this.state.password)
+
   }
 
+// keep this for future
+//   handleSubmit(event) {
+//   event.preventDefault();
+//   sendTask()({
+//     title: this.state.title,
+//     description: this.state.description,
+//     title: this.state.title,
+//     caption: this.state.caption,
+//     status: this.state.status,
+//
+//     creator_id: this.props.auth.user.id,
+//   }).then(this.setState({ redirect: "/tasks" }));
+// }
 
   render(){
     return(
