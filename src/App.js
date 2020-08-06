@@ -37,7 +37,7 @@ import fire, { db, currentUser } from './components/firebase';
 
   async signup(email, password){
     await fire.auth().createUserWithEmailAndPassword(email, password)
-    
+
     // grabs user id / sends to the database // ref for writing to DB
 
     // const user = await currentUser();

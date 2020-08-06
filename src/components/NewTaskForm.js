@@ -38,25 +38,45 @@ class NewTaskForm extends Component{
         <label>First Name</label>
         <input
         type="text"
-        name="First Name"
-        id="first name"
-        placeholder="John"
+        name="Title"
+        id="title"
+        placeholder="Task Title"
         onChange={this.handleChange}
         />
-        <label>Last Name</label>
+        <br />
+        <label>Description</label>
         <input
-        name="Last Name"
-        type="last name"
+        name="Task Description"
+        type="text"
         onChange={this.handleChange}
-        id="last name"
-        placeholder="Doe"
+        id="taskdescription"
+        placeholder="what is your task about?"
         />
-        <label>Date of Birth</label>
+                <br />
+        <label>Location</label>
         <input
-        name="DOB"
+        name="Location"
+        type="text"
+        onChange={this.handleChange}
+        id="tasklocation"
+        placeholder="Task Location"
+        />
+                <br />
+        <label>Task Status</label>
+        <input
+        name="Task Status"
+        type="text"
+        onChange={this.handleChange}
+        id="taskstatus"
+        placeholder="pending"
+        />
+                <br />
+        <label>Date Posted</label>
+        <input
+        name="Date Posted"
         type="date"
         onChange={this.handleChange}
-        id="dob"
+        id="dateposted"
         />
         <button>Next </button>
       </form>
