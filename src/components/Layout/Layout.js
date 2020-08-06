@@ -12,11 +12,8 @@ const Layout = ({ children }) => {
                         </Typography>
                     </Toolbar>
                     <nav>
-                    <Link to="/">
-                    home
-                    </Link>
                     <Link to="/login">
-                    Login
+                    login
                     </Link>
                     <Link to="/signup">
                     signup
@@ -25,7 +22,7 @@ const Layout = ({ children }) => {
                     profile
                     </Link>
                     <Link to="/newtaskform">
-                    New Task
+                    task
                     </Link>
                     </nav>
                 </AppBar>

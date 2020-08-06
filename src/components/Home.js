@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png';
-import banner from '../images/banner.png';
 
 
 class Home extends Component{
   // constructor(props){
   //   super(props)
   // }
+      // <img src={banner} id="banner" alt="Banner" />;
+      // import banner from '../images/banner.png';
 
   render(){
     return(
 
       <div>
       <h1> Good Little Helpers</h1>
-      <p> A marketplace for skilled volunteers to find collaborators</p>
-      <p> build a better community together </p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa molestiae autem doloribus accusantium magnam quis nam! Ipsa molestiae id sequi! Commodi totam voluptas, minus quos natus laboriosam libero. Perspiciatis, quos!</p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nulla aliquam iusto aut veniam, nesciunt vel aperiam voluptatem. Sed totam, nisi autem amet voluptatibus esse, soluta nemo cum provident ab.</p>
       <img src={logo} id="logo" alt="Logo" />;
-      <img src={banner} id="banner" alt="Banner" />;
-      </div>
 
+      <footer>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nemo repellendus asperiores labore. Iusto eum est ipsa commodi quisquam eos, eveniet, quae vero dolor odio, ab, accusantium repudiandae. Nostrum, quibusdam.</p>
+      </footer>
+      </div>
     )
   }
 }

@@ -78,7 +78,7 @@ class NewTaskForm extends Component{
         onChange={this.handleChange}
         id="dateposted"
         />
-        <button>Next </button>
+        <button> Submit Task </button>
       </form>
     )
   }
