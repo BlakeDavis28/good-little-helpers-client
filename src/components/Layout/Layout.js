@@ -3,12 +3,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import logo from '../../images/logo.png';
 
 const Layout = ({ children }) => {
     return (<><AppBar position="static" id ="appbar">
                     <Toolbar>
                         <Typography id="title" variant="h6" component={Link} to='/' >
-                            Good Little Helpers
+                        <img src={logo} id="logo" alt="Logo" />
                         </Typography>
                     </Toolbar>
                     <nav>

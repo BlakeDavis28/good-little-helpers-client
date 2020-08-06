@@ -35,12 +35,12 @@ class NewTaskForm extends Component{
   render(){
     return(
       <form class="newtask0" onSubmit={this.onSubmit}>
-        <label>First Name</label>
+        <label>Task Name</label>
         <input
         type="text"
         name="Title"
         id="title"
-        placeholder="Task Title"
+        placeholder="give it a title"
         onChange={this.handleChange}
         />
         <br />
@@ -50,7 +50,7 @@ class NewTaskForm extends Component{
         type="text"
         onChange={this.handleChange}
         id="taskdescription"
-        placeholder="what is your task about?"
+        placeholder="tell me more"
         />
                 <br />
         <label>Location</label>
@@ -59,7 +59,7 @@ class NewTaskForm extends Component{
         type="text"
         onChange={this.handleChange}
         id="tasklocation"
-        placeholder="Task Location"
+        placeholder="the greatest city on earth"
         />
                 <br />
         <label>Task Status</label>
@@ -68,17 +68,17 @@ class NewTaskForm extends Component{
         type="text"
         onChange={this.handleChange}
         id="taskstatus"
-        placeholder="pending"
+        placeholder="due yesterday"
         />
                 <br />
-        <label>Date Posted</label>
+        <label>Due Date</label>
         <input
         name="Date Posted"
         type="date"
         onChange={this.handleChange}
         id="dateposted"
         />
-        <button> Submit Task </button>
+        <button id="submitbutt"> Submit Task </button>
       </form>
     )
   }

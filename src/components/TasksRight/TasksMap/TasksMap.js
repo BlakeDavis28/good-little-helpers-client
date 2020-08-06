@@ -8,7 +8,7 @@ const TaskMap = ({ task }) => {
     return <Card>
         <CardContent>
             <Typography variant="headline">
-                Tasks Map
+
             </Typography>
 
         </CardContent>
