@@ -46,6 +46,8 @@ a {
 
 #cardicon {
   color: #3f51b5;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 #cardcontent {
@@ -62,7 +64,9 @@ nav a {
 }
 
 #logo {
-    height: 30vh;
+  height: 25vh;
+  margin-top: 40px;
+  float: right;
 }
 
 #appbar {
@@ -80,4 +84,11 @@ label {
   display: inline-block;
   width: 140px;
   text-align: right;
+}
+
+#stuff {
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  color: white;
 }
