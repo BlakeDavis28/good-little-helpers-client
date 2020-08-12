@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About 
+
+Good Little Helpers is a platform for creatives to volunteer there time to improve local communities. Here you will find a variety of skilled individuals to pair up with, making the perfect team to complete your work.
+
+## Tech
+
+This application was built using Firebase, React and CSS.
+
+## To Do 
+
+- User Profile/s
+- Finished / Unfinished Tasks
+- Deployment to Firebase 
+
 ## Available Scripts
 
 In the project directory, you can run:
